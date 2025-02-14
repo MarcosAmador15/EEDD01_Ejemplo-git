@@ -111,6 +111,26 @@ public class Main {
         System.out.println("bo: " + bo + "a: " + a);
         // ya sabe que la primera es verdadera por lo que no hace la segunda con ||, con | lo hace igual al segundo
 
+        //Cadenas de caracteres
+        cad = "hola";
+
+        //sobrecarga de operadores: El operador se comporta de forma diferente
+        //segun sus operadores
+        a = 1 + 1; // es suma algebraica
+        cad = "1" + "1" + 2 + 3 + 4 + 2.3 + true; // es concatenacion  incluir otro tipo se denomina wrapping
+        System.out.println("cad: " + cad);
+        String cad1 = cad.substring(2,4);
+        System.out.println("cad1: " + cad1);
+
+        bo = "hola".equals("Hola");
+        System.out.println("bo: " + bo);
+
+        bo = cad1.equals("2.3");
+        System.out.println("bo: " + bo);
+
+        //arrays
+
+
 
 
         System.exit(0);
