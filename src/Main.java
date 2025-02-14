@@ -79,6 +79,44 @@ public class Main {
         }
         System.out.println("El numero ingresado es par");
 
+        vi = (int)2.9 + (int)1.1;
+        System.out.println("vi: " + vi);
+        vi = (int)(2.9 + 1.1);
+        System.out.println("vi: " + vi);
+        //vi = (int)vb + vb; hay tipos que no son convertibles
+        vi = vc + 1;
+        System.out.println("vi (entero): " + vi + "vi (char): " + (char)vi);
+        System.exit(0);
+
+        int a=1, b=2;
+        System.out.println("a: " + a + " b: " + b);
+        a++; //post incremento
+        ++b; // pre incremento
+        System.out.println("a: " + a + " b: " + b);
+        int c = a++*++b;
+        System.out.println("a: " + a + " b: " + b + " c: " + c);
+
+        //precedencia de operadores: () ++ -- */% +- <= == >= > || && !
+        boolean bo= (2+8) < ++a || 2+5*9 == a++ + 43;
+                  //(10) < ++a || 2+5*9 == a++ + 43
+                  //10 < 4 || 2+5*9 == 4 + 43; (a vale 5)
+                  //10 < 4 || 2+5*9 == 4 + 43;
+                  //10 < 4 || 47 == 4 + 43;
+                  //false || true;
+                  //true
+        System.out.println("bo: " + bo + "a: " + a);
+
+
+        bo = ++a < 10 | ++a == 6;
+        System.out.println("bo: " + bo + "a: " + a);
+        // ya sabe que la primera es verdadera por lo que no hace la segunda con ||, con | lo hace igual al segundo
+
+
+
+        System.exit(0);
+
+
+
 
 
 
