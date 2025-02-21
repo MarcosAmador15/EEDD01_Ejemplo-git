@@ -12,37 +12,37 @@ public class Main {
         String cad = "hola";
 
         //+ Activa como operador de concatenacion
-        System.out.println("vi" + vi +"vd" + vd);
+        System.out.println("vi" + vi + "vd" + vd);
 
 
         //Leyendo datos del teclado
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca un valor entero");
-        vi=sc.nextInt();
+        vi = sc.nextInt();
         System.out.println("Valor entero leido: " + vi);
 
         //Sentencia de bifurcacion
-        if(vi % 2 == 0){
+        if (vi % 2 == 0) {
             System.out.println("El numero: " + vi + " es un numero par");
-        }else {
+        } else {
             System.out.println("El numero: " + vi + " es un numero impar");
         }
 
         //Sentencia de bifurcacion anidada
-        if(vi < 50){
+        if (vi < 50) {
             System.out.println("El numero: " + vi + " es un numero menor que 50");
-        }else if(vi > 50){
+        } else if (vi > 50) {
             System.out.println("El numero: " + vi + " es un numero mayor que 50");
-        }else{
+        } else {
             System.out.println("El numero: " + vi + " es == 50");
         }
 
         //Sentencia switch-case
         System.out.println("Introduzca un color (R/r,V/v,A/a): ");
-        cad=sc.next();
-        vc =cad.charAt(0);
+        cad = sc.next();
+        vc = cad.charAt(0);
 
-        switch(vc){
+        switch (vc) {
             case 'R':
             case 'r':
                 System.out.println("Color Rojo");
@@ -56,55 +56,55 @@ public class Main {
                 System.out.println("Color Azul");
                 break;
 
-                default:
-                    System.out.println("Color erroneo");
+            default:
+                System.out.println("Color erroneo");
         }
 
         //Bucles cuando se conoce a priori el numero de iteraciones
-        int suma1= 0, suma2= 0;
-        for(int i=0; i<10; i++){
-            suma1=suma1+i;
-            suma2+=i;
+        int suma1 = 0, suma2 = 0;
+        for (int i = 0; i < 10; i++) {
+            suma1 = suma1 + i;
+            suma2 += i;
         }
         System.out.println("Suma1: " + suma1 + " Suma2: " + suma2);
 
         //Bucles while cuando no es conocido a priori el numero de iteraciones
         //Bucle que solicite numeros al usuario hasta que introduzca un numero par
 
-        int num= 1;
-        while(num % 2 !=0){
-            int numero= 0;
+        int num = 1;
+        while (num % 2 != 0) {
+            int numero = 0;
             System.out.println("Introduzca un numero para ver si es par. Si es impar se lo volvera a pedir ");
-            numero=sc.nextInt();
-            num = numero%2;
+            numero = sc.nextInt();
+            num = numero % 2;
         }
         System.out.println("El numero ingresado es par");
 
-        vi = (int)2.9 + (int)1.1;
+        vi = (int) 2.9 + (int) 1.1;
         System.out.println("vi: " + vi);
-        vi = (int)(2.9 + 1.1);
+        vi = (int) (2.9 + 1.1);
         System.out.println("vi: " + vi);
         //vi = (int)vb + vb; hay tipos que no son convertibles
         vi = vc + 1;
-        System.out.println("vi (entero): " + vi + "vi (char): " + (char)vi);
+        System.out.println("vi (entero): " + vi + "vi (char): " + (char) vi);
         System.exit(0);
 
-        int a=1, b=2;
+        int a = 1, b = 2;
         System.out.println("a: " + a + " b: " + b);
         a++; //post incremento
         ++b; // pre incremento
         System.out.println("a: " + a + " b: " + b);
-        int c = a++*++b;
+        int c = a++ * ++b;
         System.out.println("a: " + a + " b: " + b + " c: " + c);
 
         //precedencia de operadores: () ++ -- */% +- <= == >= > || && !
-        boolean bo= (2+8) < ++a || 2+5*9 == a++ + 43;
-                  //(10) < ++a || 2+5*9 == a++ + 43
-                  //10 < 4 || 2+5*9 == 4 + 43; (a vale 5)
-                  //10 < 4 || 2+5*9 == 4 + 43;
-                  //10 < 4 || 47 == 4 + 43;
-                  //false || true;
-                  //true
+        boolean bo = (2 + 8) < ++a || 2 + 5 * 9 == a++ + 43;
+        //(10) < ++a || 2+5*9 == a++ + 43
+        //10 < 4 || 2+5*9 == 4 + 43; (a vale 5)
+        //10 < 4 || 2+5*9 == 4 + 43;
+        //10 < 4 || 47 == 4 + 43;
+        //false || true;
+        //true
         System.out.println("bo: " + bo + "a: " + a);
 
 
@@ -120,7 +120,7 @@ public class Main {
         a = 1 + 1; // es suma algebraica
         cad = "1" + "1" + 2 + 3 + 4 + 2.3 + true; // es concatenacion  incluir otro tipo se denomina wrapping
         System.out.println("cad: " + cad);
-        String cad1 = cad.substring(2,4);
+        String cad1 = cad.substring(2, 4);
         System.out.println("cad1: " + cad1);
 
         bo = "hola".equals("Hola");
@@ -131,25 +131,50 @@ public class Main {
 
         //arrays
 
-        int []arrInt1 = new int[5];
-        int []arrInt2 = {0,1,2,3,4};
+        int[] arrInt1 = new int[5];
+        int[] arrInt2 = {0, 1, 2, 3, 4};
 
         System.out.println("arrInt1: " + Arrays.toString(arrInt1));
         System.out.println("arrInt2: " + Arrays.toString(arrInt2));
 
-        int [][]matriz1= new int[5][5];
-        int [][]matriz2= {{0,1,2,3,4},
-                          {0,1,2,3,4}};
-       System.out.println("matriz1: " + Arrays.toString(matriz1[0]) + "\n" + Arrays.toString(matriz1[2]));
+        int[][] matriz1 = new int[5][5];
+        int[][] matriz2 = {{0, 1, 2, 3, 4},
+                {0, 1, 2, 3, 4}};
+        System.out.println("matriz1: " + Arrays.toString(matriz1[0]) + "\n" + Arrays.toString(matriz1[2]));
         System.out.println("matriz2: " + Arrays.toString(matriz2[0]) + "\n" + Arrays.toString(matriz2[2]));
 
 
         System.exit(0);
 
 
+        enum Calificaciones {SUS, APR, NOT, SB}
+        ;
+        Calificaciones nota0, nota1;
+        nota0 = Calificaciones.APR;
+        nota1 = Calificaciones.SB;
 
+        Calificaciones[] notas1 = new Calificaciones[10];
+        for (int i = 0; i < notas1.length; i++) {
+            notas1[i] = Calificaciones.APR;
+        }
 
-
+        //Definir un array de 10 notas y asignar a todas el valor SB
+        Calificaciones[] notas2 = new Calificaciones[10];
+        for (Calificaciones cal : notas2) {
+            cal = Calificaciones.SB;
 
         }
-    }
+
+        //Escribir un bucle for abreviado que sume los elementos  enteros de un array llamado ai de 5 posiciones iniciado a valor 10, mostrar el array con arrays.toString
+        int[] ai = {10,10,10,10,10};
+        int suma= 0;
+       for (int numero: ai) {
+             suma+=numero;
+       }
+        System.out.println("ai: " + Arrays.toString(ai) + "suma" + suma);
+
+
+
+       }
+
+}
